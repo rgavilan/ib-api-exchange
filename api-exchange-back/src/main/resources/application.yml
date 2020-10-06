@@ -2,23 +2,18 @@
 app:
   persistence:
     datasource:
-      driver-class-name: org.postgresql.Driver
-      username: postgres
-      password: admin123
-      url: jdbc:postgresql://127.0.0.1:5532/app?ssl=false
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: root
+      url: jdbc:mysql://localhost:3307/app?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&createDatabaseIfNotExist=true
+    
     jpa:
-      dialect: org.hibernate.dialect.PostgreSQL95Dialect
+      dialect: org.hibernate.dialect.MariaDB53Dialect
       generate-ddl: false
       show-sql: false
       properties:
         hibernate.temp.use_jdbc_metadata_defaults: false
-  # Solr
-  solr:
-    enabled: false
-    base-url: http://localhost:8983/solr
-    collection-name: app
-
-
+  
   # CORS
   cors:
     enabled: true
@@ -75,7 +70,7 @@ management:
     web:
       base-path: /management
   server:
-    port: 9321
+    port: 9327
   health:
     mail:
       enabled: false

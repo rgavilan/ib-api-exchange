@@ -6,13 +6,12 @@
 		<groupId>es.um.asio</groupId>
 		<artifactId>api-exchange</artifactId>
 		<version>1.0-SNAPSHOT</version>
-		<relativePath>..</relativePath>
 	</parent>
 
 	<artifactId>api-exchange-back</artifactId>
 	<packaging>${artifact.packaging}</packaging>
-	<name>Archetype - Java JPA Rest API - Back</name>
-	<description>Archetype - Java JPA Rest API - Back</description>
+	<name>UM - ASIO - api-exchange - Back</name>
+	<description>UM - ASIO - api-exchange - Back</description>
 
 	<properties>
 		<artifact.packaging>war</artifact.packaging>
@@ -75,11 +74,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>test</scope>
-		</dependency>
 	</dependencies>
 
 	<profiles>
@@ -100,10 +94,17 @@
 					<artifactId>spring-boot-starter-tomcat</artifactId>
 					<scope>compile</scope>
 				</dependency>
+
 				<dependency>
-					<groupId>org.postgresql</groupId>
-					<artifactId>postgresql</artifactId>
+					<groupId>org.mariadb.jdbc</groupId>
+					<artifactId>mariadb-java-client</artifactId>
 				</dependency>
+
+				<dependency>
+					<groupId>mysql</groupId>
+					<artifactId>mysql-connector-java</artifactId>
+				</dependency>
+
 			</dependencies>
 
 			<build>
@@ -122,13 +123,6 @@
 
 		<profile>
 			<id>jboss</id>
-
-			<dependencies>
-				<dependency>
-					<groupId>org.postgresql</groupId>
-					<artifactId>postgresql</artifactId>
-				</dependency>
-			</dependencies>
 		</profile>
 	</profiles>
 
