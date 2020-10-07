@@ -22,7 +22,7 @@ public class RepositoryTestApplication {
      *            the arguments
      */
     public static void main(final String[] args) {
-        SpringApplication.run(RepositoryTestApplication.class, args);
+       // SpringApplication.run(RepositoryTestApplication.class, args);
     }
 
     /**

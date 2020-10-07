@@ -15,7 +15,6 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.lookup.JndiDataSourceLookup;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -24,22 +23,19 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.google.common.collect.Sets;
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
+
 import es.um.asio.service.config.properties.DatasourceProperties;
 import es.um.asio.service.config.properties.JpaProperties;
 import es.um.asio.service.config.properties.PersistenceProperties;
-import es.um.asio.service.model.User;
-import es.um.asio.service.repository.UserRepository;
-import com.zaxxer.hikari.HikariConfig;
-import com.zaxxer.hikari.HikariDataSource;
 
 /**
  * Persistence configuration.
  */
 @Configuration
 @EnableConfigurationProperties(PersistenceProperties.class)
-@EnableJpaRepositories(basePackageClasses = { UserRepository.class })
 @EnableTransactionManagement
-@EntityScan(basePackageClasses = { User.class })
 public class PersistenceConfig {
 
     @Autowired
