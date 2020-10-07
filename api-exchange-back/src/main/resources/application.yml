@@ -1,5 +1,15 @@
 ---
 app:
+ # CORS
+  cors:
+    enabled: true
+    allowedOrigin: '*'
+    allowedMethods: GET,POST,PUT,DELETE
+    allowedHeaders:
+      - Authorization
+      - X-Requested-With
+      - Content-Type
+    maxAge: 3600
   persistence:
     datasource:
       driver-class-name: com.mysql.jdbc.Driver
@@ -13,17 +23,7 @@ app:
       show-sql: false
       properties:
         hibernate.temp.use_jdbc_metadata_defaults: false
-  
-  # CORS
-  cors:
-    enabled: true
-    allowedOrigin: '*'
-    allowedMethods: GET,POST,PUT,DELETE
-    allowedHeaders:
-      - Authorization
-      - X-Requested-With
-      - Content-Type
-    maxAge: 3600
+
 
   # Cache configuration
   cache:
@@ -78,5 +78,3 @@ management:
       enabled: false
     redis:
       enabled: false
-    solr:
-      enabled: ${app.solr.enabled}
