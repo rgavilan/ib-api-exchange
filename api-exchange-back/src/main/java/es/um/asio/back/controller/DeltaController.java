@@ -1,0 +1,42 @@
+package es.um.asio.back.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import es.um.asio.service.dto.DeltaDto;
+import es.um.asio.service.proxy.DeltaProxy;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
+@RestController
+@RequestMapping(DeltaController.Mappings.BASE)
+public class DeltaController {
+	
+	
+	@Autowired
+	DeltaProxy deltaProxy;
+
+	
+	 @GetMapping(value = "/{currentVersion}/{targetVersion}")
+	 public List<DeltaDto> getDelta(@PathVariable("currentVersion") final String currentVersion,@PathVariable("targetVersion") final String targetVersion) {
+		    
+	        return deltaProxy.getDelta(currentVersion,targetVersion);
+	    }
+	
+	/**
+     * Mappings.
+     */
+    @NoArgsConstructor(access = AccessLevel.PRIVATE)
+    static final class Mappings {
+        /**
+         * Controller request mapping.
+         */
+        protected static final String BASE = "/ontology";
+
+    }
+}
