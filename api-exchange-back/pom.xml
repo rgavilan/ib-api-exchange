@@ -25,16 +25,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.izertis.libraries</groupId>
-			<artifactId>izertis-swagger-starter</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>com.fasterxml.jackson.datatype</groupId>
-			<artifactId>jackson-datatype-hibernate5</artifactId>
-		</dependency>
-
-		<dependency>
 			<groupId>de.siegmar</groupId>
 			<artifactId>logback-gelf</artifactId>
 		</dependency>
@@ -68,7 +58,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
 
 	<profiles>
