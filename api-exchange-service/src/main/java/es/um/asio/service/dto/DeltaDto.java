@@ -7,26 +7,24 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 @JsonInclude(Include.NON_NULL)
 public class DeltaDto implements Serializable {
-	
-	
+
 	/**
 	 * serialVersionUID
 	 */
 	private static final long serialVersionUID = 5181842977756732401L;
-	
-	
+
 	private String entity;
-	
+
 	private String action;
-	
+
 	private String property;
-	
+
 	private String fromType;
-	
+
 	private String toType;
-	
+
 	private String toName;
-	
+
 	private String type;
 
 	/**
@@ -126,8 +124,11 @@ public class DeltaDto implements Serializable {
 	public void setType(String type) {
 		this.type = type;
 	}
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "DeltaDto [entity=" + entity + ", action=" + action + ", property=" + property + ", fromType=" + fromType
+				+ ", toType=" + toType + ", toName=" + toName + ", type=" + type + "]";
+	}
 
 }

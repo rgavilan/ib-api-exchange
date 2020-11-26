@@ -57,7 +57,6 @@
 		<org.springframework.security.oauth.version>2.3.8.RELEASE</org.springframework.security.oauth.version>
 		<org.jsoup.version>1.12.1</org.jsoup.version>
 		<org.hibernate.hibernate-jpamodelgen.version>5.4.10.Final</org.hibernate.hibernate-jpamodelgen.version>
-
 	</properties>
 
 	<dependencyManagement>
@@ -145,7 +144,6 @@
 				<artifactId>spring-security-oauth2</artifactId>
 				<version>${org.springframework.security.oauth.version}</version>
 			</dependency>
-
 		</dependencies>
 	</dependencyManagement>
 	
