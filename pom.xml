@@ -9,7 +9,6 @@
 		<relativePath />
 	</parent>
 	
-	
 	<groupId>es.um.asio</groupId>
 	<artifactId>api-exchange</artifactId>
 	<version>1.0-SNAPSHOT</version>
@@ -20,12 +19,7 @@
 	<scm>
 		<url>scm:git:https://github.com/HerculesCRUE/api-exchange.git</url>
 	</scm>
-
-  <modules>
-    <module>api-exchange-back</module>
-    <module>api-exchange-service</module>
-  </modules>
-  
+ 
   <properties>
 		<java.version>11</java.version>
 		<resource.delimiter>@</resource.delimiter> <!-- delimiter that doesn't clash with Spring ${} placeholders -->
@@ -146,6 +140,16 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	
+	<modules>
+	    <module>api-exchange-back</module>
+	    <module>api-exchange-service</module>
+	    <module>api-exchange-audit</module>
+	    <module>api-exchange-swagger</module>
+	    <module>api-exchange-service-abstractions</module>
+	    <module>api-exchange-jpa-abstractions</module>
+	    <module>api-exchange-test</module>
+  	</modules>
 	
 	<build>
 		<resources>
@@ -303,6 +307,14 @@
 							<!-- Sets the output directory for the code coverage report. -->
 							<outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
 						</configuration>
+					</execution>
+					
+					<execution>
+						<id>report-aggregate</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report-aggregate</goal>
+                        </goals>
 					</execution>
 				</executions>
 			</plugin>
