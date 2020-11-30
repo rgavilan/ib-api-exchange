@@ -12,6 +12,10 @@
 	<artifactId>api-exchange-service</artifactId>
 	<name>UM - ASIO - api-exchange - Service</name>
 	<description>UM - ASIO - api-exchange - Service</description>
+	
+	<properties>
+		<api-exchange-service.version>1.0-SNAPSHOT</api-exchange-service.version>
+	</properties>
 
 	<dependencies>
 
@@ -28,20 +32,20 @@
 		<!-- UM ASIO - dependencies -->
 		<dependency>
 			<groupId>es.um.asio</groupId>
-			<artifactId>uris-generator-jpa-abstractions</artifactId>
-			<version>1.0.0</version>
+			<artifactId>api-exchange-jpa-abstractions</artifactId>
+			<version>${api-exchange-service.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>es.um.asio</groupId>
-			<artifactId>uris-generator-service-abstractions</artifactId>
-			<version>1.0.0</version>
+			<artifactId>api-exchange-service-abstractions</artifactId>
+			<version>${api-exchange-service.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>es.um.asio</groupId>
-			<artifactId>uris-generator-audit</artifactId>
-			<version>1.0.0</version>
+			<artifactId>api-exchange-audit</artifactId>
+			<version>${api-exchange-service.version}</version>
 		</dependency>
 
 		<!-- Additional dependencies -->
