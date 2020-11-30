@@ -144,10 +144,10 @@
 	<modules>
 	    <module>api-exchange-back</module>
 	    <module>api-exchange-service</module>
+	    <module>api-exchange-jpa-abstractions</module>
+	    <module>api-exchange-service-abstractions</module>
 	    <module>api-exchange-audit</module>
 	    <module>api-exchange-swagger</module>
-	    <module>api-exchange-service-abstractions</module>
-	    <module>api-exchange-jpa-abstractions</module>
 	    <module>api-exchange-test</module>
   	</modules>
 	

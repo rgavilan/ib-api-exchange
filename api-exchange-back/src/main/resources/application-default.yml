@@ -4,9 +4,9 @@ app:
   swagger:
     enabled: true
     secured: false
-    authServerUrl: ../oauth
-    authServerClientId: acme
-    authServerClientSecret: acmesecret
+#    authServerUrl: ../oauth
+#    authServerClientId: acme
+#    authServerClientSecret: acmesecret
     
 ## Actuator
 management:
