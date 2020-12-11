@@ -17,7 +17,7 @@
 	<description>UM - ASIO - api-exchange</description>
 
 	<scm>
-		<url>scm:git:https://github.com/HerculesCRUE/api-exchange.git</url>
+		<url>scm:git:https://github.com/HerculesCRUE/ib-api-exchange.git</url>
 	</scm>
  
   <properties>
