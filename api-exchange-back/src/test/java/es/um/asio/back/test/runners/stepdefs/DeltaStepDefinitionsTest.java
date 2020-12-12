@@ -5,25 +5,19 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.context.annotation.Bean;
 
+import es.um.asio.service.ServiceConfig;
 import es.um.asio.service.dto.DeltaDto;
 import es.um.asio.service.service.DeltaService;
-import es.um.asio.service.service.impl.DeltaServiceImpl;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.spring.CucumberContextConfiguration;
 
 @CucumberContextConfiguration
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = {
-		DeltaStepDefinitions.DeltaServiceConfiguration.class })
-public class DeltaStepDefinitions {
-
-	@LocalServerPort
-	private int port;
+		ServiceConfig.class })
+public class DeltaStepDefinitionsTest {
 
 	String currentVersion;
 
@@ -34,14 +28,6 @@ public class DeltaStepDefinitions {
 	@Autowired
 	@MockBean
 	DeltaService service;
-
-	@TestConfiguration
-	static class DeltaServiceConfiguration {
-		@Bean
-		public DeltaService deltaService() {
-			return new DeltaServiceImpl();
-		}
-	}
 
 	@Given("^call to api exchange delta controller$")
 	public void call_to_api_exchange_delta_controller() {

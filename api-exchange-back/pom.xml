@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -14,13 +16,14 @@
 	<description>UM - ASIO - api-exchange - Back</description>
 
 	<properties>
-		<artifact.packaging>war</artifact.packaging>		
+		<artifact.packaging>war</artifact.packaging>
 		<cucumber.version>6.4.0</cucumber.version>
+		<cucumber-reporting.version>5.3.1</cucumber-reporting.version>
 		<api-exchange-service.version>1.0-SNAPSHOT</api-exchange-service.version>
 	</properties>
 
 	<dependencies>
-		
+
 		<!-- UM ASIO - dependencies -->
 		<dependency>
 			<groupId>es.um.asio</groupId>
@@ -60,7 +63,7 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
@@ -70,6 +73,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
 			<scope>test</scope>
 		</dependency>
 
@@ -94,6 +103,12 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>cucumber-reporting</artifactId>
+			<version>${cucumber-reporting.version}</version>
+		</dependency>
+		
 	</dependencies>
 
 	<profiles>
@@ -114,12 +129,12 @@
 					<artifactId>spring-boot-starter-tomcat</artifactId>
 					<scope>compile</scope>
 				</dependency>
-				
+
 				<dependency>
 					<groupId>org.mariadb.jdbc</groupId>
 					<artifactId>mariadb-java-client</artifactId>
 				</dependency>
-				
+
 				<dependency>
 					<groupId>mysql</groupId>
 					<artifactId>mysql-connector-java</artifactId>
@@ -137,6 +152,27 @@
 						<groupId>org.sonarsource.scanner.maven</groupId>
 						<artifactId>sonar-maven-plugin</artifactId>
 						<version>3.4.0.905</version>
+					</plugin>
+					
+					<!-- cucumber -->
+					<plugin>
+						<groupId>net.masterthought</groupId>
+						<artifactId>maven-cucumber-reporting</artifactId>
+						<version>3.13.0</version>
+						<executions>
+							<execution>
+								<id>execution</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>generate</goal>
+								</goals>
+								<configuration>
+									<projectName>ManagementSystemCucumber</projectName>
+									<outputDirectory>${project.build.directory}</outputDirectory>
+									<cucumberOutput>${project.build.directory}/cucumber/cucumber.json</cucumberOutput>
+								</configuration>
+							</execution>
+						</executions>
 					</plugin>
 				</plugins>
 			</build>

@@ -9,21 +9,19 @@ app:
       - Authorization
       - X-Requested-With
       - Content-Type
-    maxAge: 3600
+    maxAge: 3600     
   persistence:
     datasource:
-      driver-class-name: com.mysql.jdbc.Driver
+      driver-class-name: org.h2.Driver
       username: root
-      password: root
-      url: jdbc:mysql://localhost:3307/app?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&createDatabaseIfNotExist=true
-    
+      password: 
+      url: 'jdbc:h2:mem:'
     jpa:
-      dialect: org.hibernate.dialect.MariaDB53Dialect
-      generate-ddl: false
-      show-sql: false
+      dialect: org.hibernate.dialect.H2Dialect
+      generate-ddl: true
+      show-sql: true
       properties:
-        hibernate.temp.use_jdbc_metadata_defaults: false
-
+        hibernate.temp.use_jdbc_metadata_defaults: false        
 
   # Cache configuration
   cache:
@@ -53,6 +51,10 @@ management:
       enabled: false
     redis:
       enabled: false
+# Spring
+spring:
+    main:
+      web-application-type: none
 
 ## In case of configure web endpoints, remove it or change port number
 server:
