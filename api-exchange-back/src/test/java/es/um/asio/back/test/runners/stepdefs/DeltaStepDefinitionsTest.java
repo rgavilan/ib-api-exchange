@@ -4,19 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+
+import com.fasterxml.classmate.TypeResolver;
 
 import es.um.asio.service.ServiceConfig;
 import es.um.asio.service.dto.DeltaDto;
 import es.um.asio.service.service.DeltaService;
+import es.um.asio.swagger.SwaggerAutoConfiguration;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.spring.CucumberContextConfiguration;
 
 @CucumberContextConfiguration
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = {
-		ServiceConfig.class })
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = { ServiceConfig.class })
 public class DeltaStepDefinitionsTest {
 
 	String currentVersion;
@@ -24,6 +27,15 @@ public class DeltaStepDefinitionsTest {
 	String targetVersion;
 
 	List<DeltaDto> listDelta;
+
+	@MockBean
+	TypeResolver type;
+
+	@MockBean
+	SwaggerAutoConfiguration config;
+
+	@MockBean
+	SpringDataWebProperties properties;
 
 	@Autowired
 	@MockBean
