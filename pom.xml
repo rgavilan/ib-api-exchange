@@ -143,13 +143,13 @@
 	</dependencyManagement>
 	
 	<modules>
-	    <module>api-exchange-back</module>
-	    <module>api-exchange-service</module>
-	    <module>api-exchange-jpa-abstractions</module>
-	    <module>api-exchange-service-abstractions</module>
-	    <module>api-exchange-audit</module>
-	    <module>api-exchange-swagger</module>
-	    <module>api-exchange-test</module>
+		<module>api-exchange-back</module>
+		<module>api-exchange-service</module>
+		<module>api-exchange-jpa-abstractions</module>
+		<module>api-exchange-service-abstractions</module>
+		<module>api-exchange-audit</module>
+		<module>api-exchange-swagger</module>
+		<module>api-exchange-test</module>
   	</modules>
 	
 	<build>
@@ -304,10 +304,10 @@
 					
 					<execution>
 						<id>report-aggregate</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>report-aggregate</goal>
-                        </goals>
+						<phase>verify</phase>
+						<goals>
+							<goal>report-aggregate</goal>
+						</goals>
 					</execution>
 				</executions>
 			</plugin>
