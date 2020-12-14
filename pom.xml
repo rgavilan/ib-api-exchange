@@ -15,6 +15,7 @@
 	<packaging>pom</packaging>
 	<name>UM - ASIO - api-exchange</name>
 	<description>UM - ASIO - api-exchange</description>
+	<url>https://www.um.es/web/hercules/</url>
 
 	<scm>
 		<url>scm:git:https://github.com/HerculesCRUE/ib-api-exchange.git</url>
