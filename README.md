@@ -13,7 +13,9 @@
 | Próximos pasos | Implementación de ficheros delta. |
 
 
-# ASIO - Sistema de gestión entre Infraestructura Ontológica y Arquitectura Semántica|     | Master |
+# ASIO - Sistema de gestión entre Infraestructura Ontológica y Arquitectura Semántica
+
+|     | Master |
 | --- | ------ |
 | Quality Gate | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=HerculesCRUE_ib-api-exchange&metric=alert_status)](https://sonarcloud.io/dashboard?id=HerculesCRUE_ib-discovery) |
 | Coverage | [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=HerculesCRUE_ib-api-exchange&metric=coverage)](https://sonarcloud.io/dashboard?id=HerculesCRUE_ib-api-exchange) |
