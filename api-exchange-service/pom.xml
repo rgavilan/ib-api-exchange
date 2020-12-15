@@ -12,10 +12,6 @@
 	<artifactId>api-exchange-service</artifactId>
 	<name>UM - ASIO - api-exchange - Service</name>
 	<description>UM - ASIO - api-exchange - Service</description>
-	
-	<properties>
-		<api-exchange-service.version>1.0-SNAPSHOT</api-exchange-service.version>
-	</properties>
 
 	<dependencies>
 
@@ -33,19 +29,19 @@
 		<dependency>
 			<groupId>es.um.asio</groupId>
 			<artifactId>api-exchange-jpa-abstractions</artifactId>
-			<version>${api-exchange-service.version}</version>
+			<version>${project.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>es.um.asio</groupId>
 			<artifactId>api-exchange-service-abstractions</artifactId>
-			<version>${api-exchange-service.version}</version>
+			<version>${project.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>es.um.asio</groupId>
 			<artifactId>api-exchange-audit</artifactId>
-			<version>${api-exchange-service.version}</version>
+			<version>${project.version}</version>
 		</dependency>
 
 		<!-- Additional dependencies -->
