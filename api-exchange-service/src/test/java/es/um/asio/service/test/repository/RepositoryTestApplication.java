@@ -15,23 +15,22 @@ import es.um.asio.service.repository.RepositoryConfig;
 @EnableAutoConfiguration
 @Import({ PersistenceConfig.class, RepositoryConfig.class })
 public class RepositoryTestApplication {
-    /**
-     * Main method for embedded deployment.
-     *
-     * @param args
-     *            the arguments
-     */
-    public static void main(final String[] args) {
-       // SpringApplication.run(RepositoryTestApplication.class, args);
-    }
+	/**
+	 * Main method for embedded deployment.
+	 *
+	 * @param args the arguments
+	 */
+	public static void main(final String[] args) {
+		SpringApplication.run(RepositoryTestApplication.class, args);
+	}
 
-    /**
-     * Creates the password encoder BCrypt.
-     *
-     * @return The password encoder.
-     */
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return PasswordEncoderFactories.createDelegatingPasswordEncoder();
-    }
+	/**
+	 * Creates the password encoder BCrypt.
+	 *
+	 * @return The password encoder.
+	 */
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		return PasswordEncoderFactories.createDelegatingPasswordEncoder();
+	}
 }

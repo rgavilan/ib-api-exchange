@@ -18,24 +18,35 @@ import es.um.asio.service.service.impl.DeltaServiceImpl;
 @RunWith(SpringRunner.class)
 public class DeltaServiceTest {
 
-    @TestConfiguration
-    static class DeltaServiceTestConfiguration {
-        @Bean
-        public DeltaService userService() {
-            return new DeltaServiceImpl();
-        }
-    }
+	@TestConfiguration
+	static class DeltaServiceTestConfiguration {
+		@Bean
+		public DeltaService deltaService() {
+			return new DeltaServiceImpl();
+		}
+	}
 
-    /**
-     * Delta service
-     */
-    @Autowired
-    private DeltaService deltaService;
+	/**
+	 * Delta service
+	 */
+	@Autowired
+	private DeltaService deltaService;
 
-    @Test
-    public void whenGetDelta_thenDeltaIsReturned() {
-        final List<DeltaDto> delta = this.deltaService.getDelta("000", "001");
+	@Test
+	public void whenGetDelta_thenDeltaIsReturned() {
+		final List<DeltaDto> delta = this.deltaService.getDelta("000", "001");
 
-        assertThat(delta).isNotEmpty();
-    }
+		for (DeltaDto d : delta) {
+			System.out.println("Action:" + d.getAction());
+			System.out.println("Entity:" + d.getEntity());
+			System.out.println("FromType:" + d.getFromType());
+			System.out.println("Property:" + d.getProperty());
+			System.out.println("ToName:" + d.getToName());
+			System.out.println("ToType:" + d.getToType());
+			System.out.println("Type:" + d.getType());
+		}
+
+		assertThat(delta).isNotEmpty();
+	}
+
 }
