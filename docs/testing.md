@@ -18,7 +18,7 @@ REQ 5.1.7	| [`delta.feature`](../src/test/features/delta.feature) | Comunicació
 
 ## Reporte
 
-* [Cucumber Report](http://herc-iz-front-desa.atica.um.es:8070/api-exchange/cucumber-html-reports/overview-features.html)
+* [Cucumber Report](http://herc-iz-front-desa.atica.um.es:8070/api-exchange/cucumber/overview-features.html)
 
 
 
