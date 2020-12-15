@@ -13,7 +13,10 @@
 | Próximos pasos | Implementación de ficheros delta. |
 
 
-# ASIO - Sistema de gestión entre Infraestructura Ontológica y Arquitectura Semántica
+# ASIO - Sistema de gestión entre Infraestructura Ontológica y Arquitectura Semántica|     | Master |
+| --- | ------ |
+| Quality Gate | [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=HerculesCRUE_ib-api-exchange&metric=alert_status)](https://sonarcloud.io/dashboard?id=HerculesCRUE_ib-discovery) |
+| Coverage | [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=HerculesCRUE_ib-api-exchange&metric=coverage)](https://sonarcloud.io/dashboard?id=HerculesCRUE_ib-api-exchange) |
 
 Sistema de gestión de datos del módulo de procesamiento para el proyecto Backend SGI (ASIO). 
 
@@ -77,7 +80,7 @@ No es necesario especificar la clase de inicio de la aplicación, ya que el fich
 Se incluyen los resultados del testing y cobertura en los siguientes enlaces:
 
 * [Testing](http://herc-iz-front-desa.atica.um.es:8070/api-exchange/surefire/surefire-report.html)
-* [Cobertura](http://herc-iz-front-desa.atica.um.es:8070/api-exchange/jacoco/)
+* [Cobertura](https://sonarcloud.io/component_measures?id=HerculesCRUE_ib-api-exchange&metric=coverage&view=list)
 * [Testing BDD](docs/testing.md)
 
 ##  Documentación adicional
