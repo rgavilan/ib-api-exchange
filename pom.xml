@@ -38,7 +38,7 @@
 		<sonar.sources>pom.xml,src/main</sonar.sources>
 		<sonar.tests></sonar.tests>
 		<sonar.coverage.exclusions>*-audit/**,*-jpa-abstractions/**,*-service-abstractions/**,*-swagger/**,*-test/**</sonar.coverage.exclusions>
-		<sonar.coverage.jacoco.xmlReportPaths>*-test/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+		<sonar.coverage.jacoco.xmlReportPaths>./api-exchange-test/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
 
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 		<maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
