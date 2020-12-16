@@ -7,3 +7,7 @@ Feature: Communication between ontological infrastructure and semantic infrastru
     Then the api exchange retrieves the data from the ontological infrastructure layer
     Then the api exchange creates the delta file with the received data
     Then the api exchange sends the delta file to the Delta processor
+
+  Scenario: The Api-Exchange recibe data from ontological infrastructure and construct delta file
+    Given api-exchange call ontological infrastructure to get data 
+    Then the api exchange construct file

@@ -1,8 +1,8 @@
 package es.um.asio.back.test.runners.stepdefs;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.Assume;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.data.web.SpringDataWebProperties;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -58,78 +58,24 @@ public class DeltaStepDefinitionsTest {
 
 	@Then("^the api exchange creates the delta file with the received data$")
 	public void the_api_exchange_creates_the_delta_file_with_the_received_data() {
-		System.out.println("deltaService work with the data and make the response to Delta processor");
-		listDelta = deltaConstruction(currentVersion, targetVersion);
+
+		Assume.assumeTrue(false);
+//		System.out.println("deltaService work with the data and make the response to Delta processor");
+//		listDelta = deltaConstruction(currentVersion, targetVersion);
 	}
 
 	@Then("^the api exchange sends the delta file to the Delta processor$")
 	public void the_api_exchange_sends_the_delta_file_to_the_Delta_processor() {
-		System.out.println("API REST respond with the next data:");
-
-		for (DeltaDto delta : listDelta) {
-			System.out.println("Delta: " + delta.toString());
-		}
+		Assume.assumeTrue(false);
 	}
 
-	/*
-	 * Mockc constructor
-	 */
-	private List<DeltaDto> deltaConstruction(String currentVersion, String targetVersion) {
-		List<DeltaDto> response = new ArrayList<>();
-
-		if ("000".equals(currentVersion) && "001".equals(targetVersion)) {
-			DeltaDto obj = new DeltaDto();
-
-			obj.setAction("ADD");
-			obj.setEntity("asio.Person");
-			obj.setProperty("name");
-			obj.setType("java.lang.String");
-
-			response.add(obj);
-
-			obj = new DeltaDto();
-			obj.setAction("ADD");
-			obj.setEntity("asio.Person");
-			obj.setProperty("surname");
-			obj.setType("java.lang.String");
-
-			response.add(obj);
-
-			obj = new DeltaDto();
-			obj.setAction("ADD");
-			obj.setEntity("asio.Person");
-			obj.setProperty("nationalId");
-			obj.setType("java.lang.String");
-
-			response.add(obj);
-
-			obj = new DeltaDto();
-			obj.setAction("ADD");
-			obj.setEntity("asio.Person");
-			obj.setProperty("bithDate");
-			obj.setType("java.util.Date");
-
-			response.add(obj);
-
-			obj = new DeltaDto();
-			obj.setAction("ADD");
-			obj.setEntity("asio.Person");
-			obj.setProperty("address");
-			obj.setType("java.lang.String");
-
-			response.add(obj);
-
-			obj = new DeltaDto();
-			obj.setAction("ADD");
-			obj.setEntity("asio.Student");
-			obj.setProperty("name");
-			obj.setType("java.lang.String");
-
-			response.add(obj);
-
-		}
-
-		return response;
+	@Given("^api-exchange call ontological infrastructure to get data$")
+	public void api_exchange_call_ontological_infrastructure_to_get_data() {
+		Assume.assumeTrue(false);
 	}
 
+	@Then("^the api exchange construct file$")
+	public void the_api_exchange_construct_file() {
+		Assume.assumeTrue(false);
+	}
 }
