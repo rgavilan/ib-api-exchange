@@ -2,18 +2,19 @@
 
 
 
-| Entregable     | Procesador de datos                                       |
+| Entregable     | Sistema de gestión entre Infraestructura Ontológica y Arquitectura Semántica |
 | -------------- | ------------------------------------------------------------ |
-| Fecha          | 30/11/2020                                                   |
+| Fecha          | 17/12/2020                                                   |
 | Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](http://www.crue.org/SitePages/ProyectoHercules.aspx) |
-| Módulo         | Sistema de gestión                                            |
+| Módulo         | Procesador de datos                                          |
 | Tipo           | Software                                                     |
 | Objetivo       | Sistema de gestión de datos del módulo de procesamiento para el proyecto Backend SGI (ASIO). |
 | Estado         | **10%** Pendiente de procesar información procedente de ficheros delta |
-| Próximos pasos | Implementación de ficheros delta. |
-
+| Próximos pasos | Implementación de ficheros delta.                            |
 
 # ASIO - Sistema de gestión entre Infraestructura Ontológica y Arquitectura Semántica
+
+
 
 |     | Master |
 | --- | ------ |
